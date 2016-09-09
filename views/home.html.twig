@@ -7,6 +7,7 @@
         <div class="container">
             <h1>Address Book</h1>
             <form action="/create_contact" method="post">
+                <h4>Add a contact</h4>
                 <div class="form-group">
                     <label for="newName">Name:</label>
                     <input id="newName" type="text" class="form-control" name="newName">
@@ -19,8 +20,10 @@
                     <label for="newAddress">Address:</label>
                     <input id="newAddress" type="text" class="form-control" name="newAddress">
                 </div>
-                <button type="submit" class="btn btn-success">Add Contact</button>
+                <button type="submit" class="btn btn-success" name="create">Add Contact</button>
+                <a href="/deleteall"><button type="submit" name="delete" class="btn btn-danger">Delete All Contacts</button></a>
             </form>
+            <h3>Your Contacts:</h3>
             {% for contact in all_contacts %}
                 <li> {{ contact.getName }} </li>
                 <ul>

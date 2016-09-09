@@ -20,7 +20,7 @@
         $newContact->save();
         $newContact->saveOne();
         return $app['twig']->render('added-a-contact.html.twig', array('new_contact' => Contact::getOne()));
-    });
+    });    
 
     return $app;
 ?>
