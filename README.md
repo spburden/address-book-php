@@ -28,7 +28,7 @@ _PHP, Silex, Twig, HTML, and Bootstrap_
 ## Specifications
 | Behavior | Input Ex. | Output Ex. |
 | --- | --- | --- |
-| Users can enter name, phone number, and address |  Submit: Mike, 5051001000, 123 5th Ave, Portland, OR |  Mike, 123 5th Ave, Portland, OR, 5051001000 |
+| Users can enter name, phone number, and address |  Submit: Mike Jones, (505)100-1000, 123 5th Ave Portland OR 97201 |  Mike Jones, 123 5th Ave Portland OR 97201, (505)100-1000 |
 
 ### License
 The MIT License (MIT)
