@@ -1,32 +1,34 @@
-# _Address Book_
+# _Address Book with PHP_
 
-#### _A web page which stores a user's address book, September 9, 2016_
+#### _A basic web application which stores a user's address book, September 9, 2016_
 
 #### By _**Stephen Burden**_
 
 ## Description
-_This is a web page is an address book for a user. In a session it stores users contacts from the user's inputs. It contains forms and some form validation._
+_This application is an address book for the user. It stores, lists, and clears a list of contacts from user's form inputs._
 
 ## Setup/Installation Requirements
-* _Clone this repository to your desktop_
-* _In Terminal or Command Prompt enter this command: php -S localhost:8000_
+* _Clone the repository from the link below to your desktop_
+* _Run Composer Install to include all dependencies_
+* _In Terminal or Command Prompt go to the /web directory and enter the command: php -S localhost:8000_
 * _To browse go to http://localhost:8000/ in the browser of your choosing_
 
 ## Link
 https://github.com/spburden/address-book-php
 
 ## Known Bugs
-_None yet_
+_There are no known bugs with this application._
 
 ## Support and contact details
 _spburden@hotmail.com_
 
 ## Technologies Used
-_PHP,
-Silex,
-Twig,
-HTML,
-Bootstrap_
+_PHP, Silex, Twig, HTML, and Bootstrap_
+
+## Specifications
+| Behavior | Input Ex. | Output Ex. |
+| --- | --- | --- |
+| Users can enter name, phone number, and address |  Submit: Mike, 5051001000, 123 5th Ave, Portland, OR |  Mike, 123 5th Ave, Portland, OR, 5051001000 |
 
 ### License
 The MIT License (MIT)
