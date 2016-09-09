@@ -23,7 +23,8 @@
     });
 
     $app->get("/delete_contacts", function() use ($app) {
-        return $app['twig']->render('delete-contacts.html.twig', array('all_contacts' => Contact::deleteAll()));
+        Contact::deleteAll();
+        return $app['twig']->render('contacts-cleared.html.twig');
     });
 
     return $app;

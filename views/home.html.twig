@@ -31,7 +31,7 @@
                     <li> Miles: {{ contact.getPhoneNumber }} </li>
                 </ul>
             {% endfor %}
-            <form action="/delete_contacts" method="post">
+            <form action="/delete_contacts" method="get">
                 <button type="submit" name="delete" class="btn btn-danger">Clear Contacts</button>
             </form>
         </div>
