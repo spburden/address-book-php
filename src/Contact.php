@@ -12,6 +12,36 @@
         $this->address = $newAddress;
     }
 
-    
+    function setName($name)
+    {
+        $this->test = (string) $name;
+    }
+
+    function getName()
+    {
+        return $this->name;
+    }
+
+    function setPhoneNumber($phoneNumber)
+    {
+        $this->phoneNumber = (string) $phoneNumber;
+    }
+
+    function getPhoneNumber()
+    {
+        return $this->phoneNumber;
+    }
+
+    function setAddress($address)
+    {
+        $this->address = (string) $address;
+    }
+
+    function getAddress()
+    {
+        return $this->address;
+    }
+
+
     }
 ?>
