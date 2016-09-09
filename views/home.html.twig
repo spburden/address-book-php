@@ -10,7 +10,7 @@
                 <h4>Add a contact</h4>
                 <div class="form-group">
                     <label for="newName">Name:</label>
-                    <input id="newName" type="text" class="form-control" name="newName">
+                    <input id="newName" type="text" class="form-control" name="newName" required>
                 </div>
                 <div class="form-group">
                     <label for="newPhone">Phone Number:</label>
@@ -21,14 +21,13 @@
                     <input id="newAddress" type="text" class="form-control" name="newAddress">
                 </div>
                 <button type="submit" class="btn btn-success" name="create">Add Contact</button>
-
             </form>
             <h3>Your Contacts:</h3>
             {% for contact in all_contacts %}
-                <li> {{ contact.getName }} </li>
                 <ul>
-                    <li> ${{ contact.getAddress }} </li>
-                    <li> Miles: {{ contact.getPhoneNumber }} </li>
+                    <li> {{ contact.getName }} </li>
+                    <p> {{ contact.getAddress }} </p>
+                    <p> {{ contact.getPhoneNumber }} </p>
                 </ul>
             {% endfor %}
             <form action="/delete_contacts" method="get">
