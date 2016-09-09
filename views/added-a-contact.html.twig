@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>You created a contact!</title>
+    </head>
+    <body>
+        <div class="container">
+        <h1>You created a contact!</h1>
+        {% for contact in new_contact %}
+            <li> {{ contact.getName }} </li>
+            <ul>
+                <li> ${{ contact.getAddress }} </li>
+                <li> Miles: {{ contact.getPhoneNumber }} </li>
+            </ul>
+        {% endfor %}
+        <a href="/"><button type="submit" class="btn btn-primary">Go Back</button></a>
+
+    </body>
+</html>

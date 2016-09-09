@@ -6,7 +6,7 @@
     <body>
         <div class="container">
             <h1>Address Book</h1>
-            <form class="/addcontact" action="added-a-contact.html" method="post">
+            <form action="/create_contact" method="post">
                 <div class="form-group">
                     <label for="newName">Name:</label>
                     <input id="newName" type="text" class="form-control" name="newName">
@@ -21,9 +21,13 @@
                 </div>
                 <button type="submit" class="btn btn-success">Add Contact</button>
             </form>
-            <ul>
-                
-            </ul>
+            {% for contact in all_contacts %}
+                <li> {{ contact.getName }} </li>
+                <ul>
+                    <li> ${{ contact.getAddress }} </li>
+                    <li> Miles: {{ contact.getPhoneNumber }} </li>
+                </ul>
+            {% endfor %}
         </div>
     </body>
 </html>

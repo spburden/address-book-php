@@ -11,7 +11,15 @@
     'twig.path' => __DIR__.'/../views'
     ));
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('home.html.twig', array('user_contacts' => Contact::getAll()));
+        $_SESSION['new_contact'] = array();
+        return $app['twig']->render('home.html.twig', array('all_contacts' => Contact::getAll()));
+    });
+
+    $app->post("/create_contact", function() use ($app) {
+        $newContact = new Contact($_POST['newName'], $_POST['newPhone'], $_POST['newAddress']);
+        $newContact->save();
+        $newContact->saveOne();
+        return $app['twig']->render('added-a-contact.html.twig', array('new_contact' => Contact::getOne()));
     });
 
     return $app;

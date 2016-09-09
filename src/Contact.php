@@ -47,6 +47,11 @@
         return $_SESSION['list_of_contacts'];
     }
 
+    static function getOne()
+    {
+        return $_SESSION['new_contact'];
+    }
+
     static function deleteAll()
     {
         $_SESSION['list_of_contacts'] = array();
@@ -55,6 +60,11 @@
     function save()
     {
         array_push($_SESSION['list_of_contacts'], $this);
+    }
+    
+    function saveOne()
+    {
+        array_push($_SESSION['new_contact'], $this);
     }
 
     }
