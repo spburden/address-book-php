@@ -1,18 +1,19 @@
-# _Programming Track Suggester_
+# _Address Book_
 
-#### _A web page which suggests which coding track to take based on user inputs, August 12, 2016_
+#### _A web page which stores a user's address book, September 9, 2016_
 
 #### By _**Stephen Burden**_
 
 ## Description
-_This is a web page which suggests which coding track to take based on user inputs. It contains forms and some form validation._
+_This is a web page is an address book for a user. In a session it stores users contacts from the user's inputs. It contains forms and some form validation._
 
 ## Setup/Installation Requirements
 * _Clone this repository to your desktop_
-* _Open index.html in the browser of your choosing_
+* _In Terminal or Command Prompt enter this command: php -S localhost:8000_
+* _To browse go to http://localhost:8000/ in the browser of your choosing_
 
 ## Link
-https://spburden.github.io/track-suggester/
+https://github.com/spburden/address-book-php
 
 ## Known Bugs
 _None yet_
@@ -21,11 +22,11 @@ _None yet_
 _spburden@hotmail.com_
 
 ## Technologies Used
-_HTML,
-CSS,
-Bootstrap,
-JS,
-jQuery_
+_PHP,
+Silex,
+Twig,
+HTML,
+Bootstrap_
 
 ### License
 The MIT License (MIT)
