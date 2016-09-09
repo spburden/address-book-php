@@ -21,7 +21,7 @@
                     <input id="newAddress" type="text" class="form-control" name="newAddress">
                 </div>
                 <button type="submit" class="btn btn-success" name="create">Add Contact</button>
-                <a href="/deleteall"><button type="submit" name="delete" class="btn btn-danger">Delete All Contacts</button></a>
+
             </form>
             <h3>Your Contacts:</h3>
             {% for contact in all_contacts %}
@@ -31,6 +31,9 @@
                     <li> Miles: {{ contact.getPhoneNumber }} </li>
                 </ul>
             {% endfor %}
+            <form action="/delete_contacts" method="post">
+                <button type="submit" name="delete" class="btn btn-danger">Clear Contacts</button>
+            </form>
         </div>
     </body>
 </html>

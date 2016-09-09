@@ -20,7 +20,11 @@
         $newContact->save();
         $newContact->saveOne();
         return $app['twig']->render('added-a-contact.html.twig', array('new_contact' => Contact::getOne()));
-    });    
+    });
+
+    $app->get("/delete_contacts", function() use ($app) {
+        return $app['twig']->render('delete-contacts.html.twig', array('all_contacts' => Contact::deleteAll()));
+    });
 
     return $app;
 ?>
